@@ -76,17 +76,22 @@
     -webkit-transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
   }
-
+::-webkit-scrollbar { 
+    display: none; 
+}
 
   /* demo styles
   --------------------------------------------- */
 
   body, html {
     overflow: hidden;
+    overflow-y:hidden;
   }
 
   body {
     font: 100% / 1.5 Arial;
+    overflow: hidden;
+    overflow-y:hidden;
   }
 
   * {
@@ -102,8 +107,9 @@
   .title {
     text-align: center;
     position: absolute;
+    font-size:30px;
     left: 50%;
-    top: 50%;
+    top: 20%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
@@ -127,24 +133,30 @@
     
   }
   #group2 .parallax__layer--back {
-    background: url('1.jpg') no-repeat;
-    background-size: cover ;
+    background : rgb(102,204,102);
+   /* background: url('1.jpg') no-repeat;
+    background-size: cover ; 
+    */
   }
 
   #group3 {
     z-index: 4; /* slide over group 2 and 4 */
   }
   #group3 .parallax__layer--base {
-    background: url('2.jpg') no-repeat;
-    background-size: cover ;
+    background : rgb(102,104,102);
+   /* background: url('1.jpg') no-repeat;
+    background-size: cover ; 
+    */
   }
 
   #group4 {
     z-index: 2; /* slide under group 3 and 5 */
   }
   #group4 .parallax__layer--back {
-    background: url('3.jpg') no-repeat;
-    background-size: cover;
+    background : rgb(02,204,102);
+   /* background: url('1.jpg') no-repeat;
+    background-size: cover ; 
+    */
   }
 
   #group5 {
@@ -180,7 +192,28 @@
     text-align:center;
     width: 100%;
   }
-
+   .demo__logo {
+    position: absolute;
+    z-index:100;
+    top: 1vh;
+    top: auto;
+    font-size:80%;
+    text-align:center;
+    width: 100%;
+    margin-top: 0%;
+  }
+.demo__map {
+    position: absolute;
+    z-index:100;
+    top: 1vh;
+    top: auto;
+    font-size:80%;
+    text-align:center;
+    margin-left: 55%;
+    margin-top: 14%;
+    border: 2px solid;
+    border-radius: 25px;
+  }
   /* Navbar
   --------------------------------------------- */
 .nav ul {
@@ -192,7 +225,7 @@
 }
 .nav li {
   font-family: 'Oswald', sans-serif;
-  font-size: 1.2em;
+  font-size: 40px;
   line-height: 40px;
   height: 40px;
   border-bottom: 1px solid #888;
@@ -217,11 +250,11 @@
  
 @media screen and (min-width: 600px) {
   .nav li {
-    width: 120px;
+    width: 150px;
     border-bottom: none;
-    height: 50px;
-    line-height: 50px;
-    font-size: 1.4em;
+    height: 80px;
+    line-height: 80px;
+    font-size: 20px;
   }
  
   /* Option 1 - Display Inline */
@@ -245,3 +278,20 @@
   */
 }
 
+
+
+.move{
+  margin-top: 100px;
+}
+.move2{
+  margin-top: 14%;
+}
+.move-left{
+  float: left ;
+
+}
+
+
+.move-down{
+  margin-top: 0%;
+}
